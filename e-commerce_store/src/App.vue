@@ -1,6 +1,3 @@
-<script setup>
-
-</script>
 
 <template>
   <header>
@@ -10,9 +7,22 @@
   </header>
 
   <main>
-  <h1> lets go</h1>
+    <div id="app">
+    <ProductList />
+  </div>
   </main>
 </template>
+<script>
+import ProductList from '@/components/ProductList.vue';
+
+export default{
+name: 'App',
+components: {
+  ProductList
+}
+};
+
+</script>
 
 <style scoped>
 header {
