@@ -12,6 +12,7 @@
   </div>
   </main>
 </template>
+
 <script>
 import ProductList from '@/components/ProductList.vue';
 
