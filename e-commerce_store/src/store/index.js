@@ -1,6 +1,5 @@
-// src/store/index.js
 import { createStore } from 'vuex';
-import { fetchProducts, fetchCategories, fetchProductDetail } from '@/api';
+import { getProducts, getProduct, getCategories } from '../services/api';
 
 export default createStore({
   state: {
@@ -39,8 +38,8 @@ export default createStore({
     async fetchProducts({ commit }) {
       commit('setLoading', true);
       try {
-        const products = await fetchProducts();
-        commit('setProducts', products);
+        const { data } = await getProducts();
+        commit('setProducts', data);
       } catch (error) {
         commit('setError', 'Error fetching products');
       } finally {
@@ -49,8 +48,8 @@ export default createStore({
     },
     async fetchCategories({ commit }) {
       try {
-        const categories = await fetchCategories();
-        commit('setCategories', categories);
+        const { data } = await getCategories();
+        commit('setCategories', data);
       } catch (error) {
         commit('setError', 'Error fetching categories');
       }
@@ -58,8 +57,8 @@ export default createStore({
     async fetchProductDetail({ commit }, productId) {
       commit('setLoading', true);
       try {
-        const product = await fetchProductDetail(productId);
-        commit('setProductDetail', product);
+        const { data } = await getProduct(productId);
+        commit('setProductDetail', data);
       } catch (error) {
         commit('setError', 'Error fetching product details');
       } finally {
@@ -82,3 +81,4 @@ export default createStore({
     },
   },
 });
+
