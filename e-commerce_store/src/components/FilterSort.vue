@@ -72,7 +72,8 @@ export default {
   align-items: center;
   gap: 20px;
   margin-bottom: 10px;
-  border-radius: 4px;
+  padding: 30px;
+
 }
 
 .select-wrapper {
