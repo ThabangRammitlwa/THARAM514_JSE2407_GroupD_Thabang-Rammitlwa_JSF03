@@ -11,7 +11,7 @@
 
     <div class="select-wrapper">
       <select v-model="activeSort">
-        <option value="default">Default sorting</option>
+        <option value="default">Price Sort</option>
         <option value="lowest">Lowest Price</option>
         <option value="highest">Highest Price</option>
       </select>

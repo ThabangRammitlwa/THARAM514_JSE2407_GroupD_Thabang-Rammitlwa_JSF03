@@ -1,7 +1,8 @@
 <template>
     <header class="header">
+       <!-- <h1>1 Stop-Store</h1>-->
         <div class="logo">
-            <img src="" alt="">
+            <img src="@/assets/logo.png" alt="Logo" />
         </div>
         <div class="search">
             <input type="text" placeholder="search products..." v-model="searchQuery" @keyup.enter="searchProducts">
@@ -44,11 +45,15 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: blue;
+    background-color: lightblue;
     border-bottom: 1px solid #e7e7e7;
 }
 .logo img{
-    height: 400px;
+    height: 100px;
+    width: 200px;
+    image-resolution:initial;
+
+
 }
 
 .search input{
@@ -70,6 +75,13 @@ export default {
 
 .span span{
     font-size: 16px;
+}
+
+h1{
+   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: bolder;
 }
 
 

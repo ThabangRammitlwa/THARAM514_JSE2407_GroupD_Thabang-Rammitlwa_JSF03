@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div v-if="loading">Loading...</div>
     <div v-else-if="error">{{ error }}</div>
     <div>
@@ -41,6 +41,11 @@ export default {
 </script>
 
 <style scoped>
+.container{
+  background-color: rgb(227, 236, 236);
+}
+
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

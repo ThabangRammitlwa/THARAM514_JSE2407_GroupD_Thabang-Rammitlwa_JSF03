@@ -2,7 +2,7 @@
 <template>
     <div class="product-card" @click="goToDetail">
       <img :src="product.image" :alt="product.title" />
-      <h3>{{ product.title }}</h3>
+      <h2>{{ product.title }}</h2>
       <p>Price: ${{ product.price }}</p>
       <p>Category: {{ product.category }}</p>
     </div>
@@ -24,9 +24,10 @@
   
   <style scoped>
   .product-card {
+    background-color: white;
     border: 2px solid #ddd;
     border-radius: 30px;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,7 +43,7 @@
   }
   
   h2 {
-    font-size: 1em;
+    font-size:medium;
     margin-bottom: 10px;
   }
   

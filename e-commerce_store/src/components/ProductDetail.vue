@@ -5,7 +5,7 @@
     <button @click="goBack">Back to Products</button>
     <div class="product-detail">
       <img :src="productDetail.image" :alt="productDetail.title" />
-      <h3>{{ productDetail.title }}</h3>
+      <h2>{{ productDetail.title }}</h2>
       <p>Description: {{ productDetail.description }}</p>
       <p>Price: ${{ productDetail.price }}</p>
       <p>Category: {{ productDetail.category }}</p>
@@ -37,8 +37,11 @@ export default {
 
 <style scoped>
 .product-detail {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 10px;
 }
 
 img{
@@ -49,11 +52,14 @@ img{
 p{
   text-align: center;
   margin-bottom: 1rem;
+  max-width: 600px;
   
 }
 
 button {
-  margin-bottom: 20px;
+  border: solid;
+  border-radius: 5px;
+  font-size: medium;
 
   
 }
