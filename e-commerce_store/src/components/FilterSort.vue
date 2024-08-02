@@ -93,8 +93,6 @@ select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  border: 1px solid #141313;
-  border-radius: 10px;
   padding: 10px 30px 10px 10px;
   font-size: 1rem;
   cursor: pointer;

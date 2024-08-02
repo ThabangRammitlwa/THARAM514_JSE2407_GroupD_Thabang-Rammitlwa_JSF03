@@ -25,8 +25,6 @@
   <style scoped>
   .product-card {
     background-color: white;
-    border: 2px solid #ddd;
-    border-radius: 30px;
     padding: 10px;
     display: flex;
     flex-direction: column;

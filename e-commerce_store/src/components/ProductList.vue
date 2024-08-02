@@ -57,4 +57,11 @@ export default {
 select {
   margin: 10px;
 }
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
 </style>

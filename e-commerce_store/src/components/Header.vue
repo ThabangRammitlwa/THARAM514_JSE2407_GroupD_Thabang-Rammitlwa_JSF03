@@ -1,6 +1,5 @@
 <template>
     <header class="header">
-       <!-- <h1>1 Stop-Store</h1>-->
         <div class="logo">
             <img src="@/assets/logo.png" alt="Logo" />
         </div>
@@ -43,21 +42,20 @@ export default {
 .header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     padding: 10px 20px;
-    background-color: lightblue;
+    background-color: #add8e6;
     border-bottom: 1px solid #e7e7e7;
 }
 .logo img{
     height: 100px;
     width: 200px;
-    image-resolution:initial;
-
-
+    image-resolution:inherit;
 }
 
 .search input{
-    width: 300px;
+    display: flex;
+    width: 400px;
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -77,11 +75,20 @@ export default {
     font-size: 16px;
 }
 
-h1{
-   
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: italic;
-    font-weight: bolder;
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search input {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .cart {
+    margin-top: 10px;
+  }
 }
 
 
