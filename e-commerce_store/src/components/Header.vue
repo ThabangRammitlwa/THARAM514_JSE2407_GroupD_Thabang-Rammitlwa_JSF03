@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <div class="logo">
-            <img src="@/assets/logo.png" alt="Logo" />
+            <img src="@/assets/logo2.png" alt="Logo" />
         </div>
         <div class="search">
             <input type="text" placeholder="search products..." v-model="searchQuery" @keyup.enter="searchProducts">
@@ -48,8 +48,8 @@ export default {
     border-bottom: 1px solid #e7e7e7;
 }
 .logo img{
-    height: 100px;
-    width: 200px;
+    height: 100%;
+    width: 300px;
     image-resolution:inherit;
 }
 
