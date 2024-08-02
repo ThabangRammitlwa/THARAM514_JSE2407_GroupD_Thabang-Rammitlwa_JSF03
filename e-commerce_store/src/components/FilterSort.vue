@@ -25,9 +25,24 @@
 import { computed } from 'vue';
 import { useStore } from 'vuex';
 
+/**
+ * @typedef {Object} FilterSortProps
+ * @property {string[]} categories - Array of available categories
+ */
+
+/**
+ * FilterSort component
+ * Allows filtering products by category and sorting by price
+ * @vue-component
+ * @param {FilterSortProps} props
+ */
 export default {
   name: 'FilterSort',
   props: {
+    /**
+     * Array of available categories
+     * @type {string[]}
+     */
     categories: {
       type: Array,
       default: () => []
@@ -36,20 +51,35 @@ export default {
   setup(props, { emit }) {
     const store = useStore();
 
+    /**
+     * Computed property for the active category
+     * @type {import('vue').ComputedRef<string>}
+     */
     const activeCategory = computed({
       get: () => store.state.activeCategory,
       set: (value) => store.commit('setActiveCategory', value)
     });
 
+    /**
+     * Computed property for the active sort option
+     * @type {import('vue').ComputedRef<string>}
+     */
     const activeSort = computed({
       get: () => store.state.activeSort,
       set: (value) => store.commit('setActiveSort', value)
     });
 
+    /**
+     * Applies the current filter and sort settings
+     * @emits filterSort
+     */
     function applyFilterSort() {
       emit('filterSort', { category: activeCategory.value, sort: activeSort.value });
     }
 
+    /**
+     * Resets filters to default values and applies the reset
+     */
     function resetFilters() {
       store.commit('setActiveCategory', 'all');
       store.commit('setActiveSort', 'default');
@@ -64,6 +94,7 @@ export default {
   }
 };
 </script>
+
 
 <style scoped>
 .filter-sort {

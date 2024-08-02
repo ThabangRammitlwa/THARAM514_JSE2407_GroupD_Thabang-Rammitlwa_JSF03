@@ -28,6 +28,13 @@ export default {
   },
   methods: {
     ...mapActions(['fetchProducts', 'fetchCategories']),
+    
+    /**
+     * Applies the filter and sort options to the product list.
+     * @param {Object} filterSortOptions - The filter and sort options.
+     * @param {string} filterSortOptions.category - The selected category to filter by.
+     * @param {string} filterSortOptions.sort - The selected sort option.
+     */
     applyFilterSort({ category, sort }) {
       this.$store.commit('setActiveCategory', category);
       this.$store.commit('setActiveSort', sort);
@@ -39,6 +46,27 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+select {
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+</style>
+
 
 <style scoped>
 .container{
