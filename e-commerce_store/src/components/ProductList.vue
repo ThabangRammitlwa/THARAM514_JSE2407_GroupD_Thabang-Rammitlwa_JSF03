@@ -48,6 +48,10 @@ export default {
 </script>
 
 <style scoped>
+.container{
+  padding: 20px;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

@@ -1,5 +1,6 @@
 <template>
     <header class="header">
+        <div class="header-content">
         <div class="logo">
             <img src="@/assets/logo2.png" alt="Logo" />
         </div>
@@ -9,6 +10,7 @@
         <div class="cart">
             <i class="fas fa-shopping-cart"></i>
             <span>{{ cartItemCount }}</span>
+        </div>
         </div>
     </header>
 </template>
@@ -39,26 +41,44 @@ export default {
 
 <style scoped>
 
-.header{
+header{
+    background-color: lightblue;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items:center;
-    padding: 10px 20px;
-    background-color: #add8e6;
-    border-bottom: 1px solid #e7e7e7;
-}
+    align-items: center;
+    padding: 0 20px;
+  }
+
+
 .logo img{
     height: 100%;
-    width: 300px;
+    width: 100px;
     image-resolution:inherit;
 }
 
-.search input{
+.search {
+    flex-grow: 1;
+    margin: 0 20px;
     display: flex;
-    width: 400px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  }
+
+.search input{
+    flex-grow: 1;
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px 0 0 4px;
 }
 
 .cart{
@@ -69,6 +89,7 @@ export default {
 .cart i{
     font-size: 28px;
     margin-right: 5px;
+    color: rgb(11, 11, 63);
 }
 
 .span span{

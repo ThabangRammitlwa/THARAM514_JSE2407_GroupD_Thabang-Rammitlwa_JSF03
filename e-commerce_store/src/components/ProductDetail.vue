@@ -79,21 +79,22 @@ export default {
 
 <style scoped>
 .container{
-  background-color: rgb(227, 236, 236); ;
+  background-color: rgb(227, 236, 236);
+  padding: 30px;
 }
 
 .back {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 20px;
+  padding: 40px;
 }
 
 .product-detail {
   border-radius: 20px solid;
   display: flex;
   align-items: flex-start;
-  padding: 50px;
+  padding: 20px;
   gap: 50px;
 }
 
@@ -137,7 +138,7 @@ button {
   border: solid;
   border-radius: 5px;
   font-size: medium;
-  padding: 10px 20px;
+  padding: 10px 10px;
   cursor: pointer;
 }
 

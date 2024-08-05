@@ -99,11 +99,12 @@ export default {
 <style scoped>
 .filter-sort {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 10px;
-  padding: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+    padding: 50px;
+    border-radius: 4px;
 
 }
 
