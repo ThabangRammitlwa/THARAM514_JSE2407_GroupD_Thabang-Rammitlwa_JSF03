@@ -48,6 +48,7 @@
   
   <style scoped>
   .product-card {
+    border: 1px solid #ccc;
     background-color: white;
     padding: 10px;
     display: flex;
@@ -55,7 +56,12 @@
     align-items: center;
     text-align: center;
     cursor: pointer;
-  }
+    margin-right: 10px;
+    margin-bottom: 10px;
+    max-width: 200px;
+    box-sizing: border-box;
+}
+  
   
   img {
     width: 100%;

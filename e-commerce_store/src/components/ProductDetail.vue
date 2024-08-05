@@ -78,6 +78,18 @@ export default {
 </script>
 
 <style scoped>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .container{
   background-color: rgb(227, 236, 236);
   padding: 30px;
@@ -91,7 +103,6 @@ export default {
 }
 
 .product-detail {
-  border-radius: 20px solid;
   display: flex;
   align-items: flex-start;
   padding: 20px;
@@ -130,6 +141,7 @@ p:nth-of-type(2) {
 
 p:nth-of-type(4) {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: #02283f solid;
 }
 
 button {

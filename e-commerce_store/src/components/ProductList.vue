@@ -47,9 +47,23 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .container{
   padding: 20px;
+  background-color: lightgrey;
 }
 
 .product-grid {
@@ -71,29 +85,3 @@ select {
 }
 </style>
 
-
-<style scoped>
-.container{
-  background-color: rgb(227, 236, 236);
-}
-
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  width: 100%;
-  padding: 20px;
-}
-
-select {
-  margin: 10px;
-}
-
-@media (max-width: 768px) {
-  .product-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
-}
-
-</style>
